@@ -1,0 +1,12 @@
+{% extends 'other_app/base.html' %}
+{% block content %}
+    <div class="post">
+        {% if post.release_date %}
+            <div class="date">
+                {{ post.release_date }}
+            </div>
+        {% endif %}
+        <h1>{{ post.name }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endblock%}
